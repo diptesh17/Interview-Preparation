@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int D = 1001;
+static const int D = 1001;
 int dp[D][D];
 
 int LCS(string X, string Y, int n, int m) {
