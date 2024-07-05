@@ -1,6 +1,7 @@
 /* 
   Also known as - Kahn's algorithm
   Topological sort : firstly less depended ( less indegree ), followed by more dependent 
+  - Only works in acyclic graph , if loop or cycle occur it won't work
 
   // Steps : 
   - Use DFS
