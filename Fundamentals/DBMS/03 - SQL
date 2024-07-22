@@ -1,0 +1,50 @@
+1) Create a database : create database practice;
+
+2) Use that database : use practice;
+
+3) Create a table : CREATE TABLE Employees (
+        EmployeeID INT PRIMARY KEY,
+        FirstName VARCHAR(50),
+        LastName VARCHAR(50),
+        Department VARCHAR(50),
+        Salary DECIMAL(10, 2),
+        HireDate DATE,
+        ManagerID INT
+    );
+
+4) Check using : select * from  Employees;
+
+5) Insert data into table : INSERT INTO Employees (EmployeeID, FirstName, LastName, Department, Salary, HireDate, ManagerID) VALUES
+(1, 'John', 'Smith', 'HR', 50000, '2018-03-15', 3),
+(2, 'Jane', 'Doe', 'IT', 60000, '2019-06-01', 3),
+(3, 'Mike', 'Johnson', 'IT', 80000, '2015-09-12', NULL),
+(4, 'Emily', 'Davis', 'Finance', 55000, '2020-01-23', 5),
+(5, 'James', 'Wilson', 'Finance', 70000, '2016-11-30', NULL),
+(6, 'Anna', 'Brown', 'HR', 45000, '2017-04-15', 1),
+(7, 'David', 'Wilson', 'IT', 62000, '2019-08-19', 3);
+
+6) Check table : select * from Employees;
+
+
+7) Retrive any column : select FirstName from Employees;
+
+8) Maximum Salary : select * from Employees where Salary = ( select MAX(Salary) from Employees);
+
+9) Second Max Salary : select * from Employees where Salary = ( select MAX(Salary) from Employees where Salary < ( select MAX(Salary) from Employees ));
+
+10) Arrange Salary in desc order : SELECT * FROM Employees ORDER BY Salary DESC;
+
+11) Arrange Salary in asc order : SELECT * FROM Employees ORDER BY Salary ;
+
+12) Whose Dept is 'IT' : select * from Employees where Department = 'IT' ;
+
+13) Dept 'IT' and salary > 70000 : select * from Employees where Department = 'IT' and Salary > 70000;
+
+14) Count whose Department is 'HR' : SELECT COUNT(*) FROM Employees WHERE Department = 'HR';
+
+15) Avg salary of employees : SELECT AVG(Salary) FROM Employees;
+
+16) Dept wise avg salary : SELECT Department, AVG(Salary) FROM Employees GROUP BY Department;
+
+17) Distinct from column : SELECT DISTINCT Department FROM Employees;
+
