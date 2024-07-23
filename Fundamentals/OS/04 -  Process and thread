@@ -1,0 +1,12 @@
+-- Program : An executable file , which comsist of compiled code and ready to be execute
+
+-- Process : Program under execution, every process has its own memory
+
+-- Thread : A light weight process, multi-threads actually shares the memory which is allocated to there process 
+
+// Difference 
+
+-- Multitasking : Deal with process + CPU = 1 + Isolation & memory protection + Context switch between more than one process
+
+-- Multithreading : Process divides into multi threads + CPU >=1 + No memory isolation + Context switch between threads + Parallel execution ( async nature )
+
