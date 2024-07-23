@@ -1,0 +1,7 @@
+-- Kernel : Part of OS which interacts directly with hardware and perform crucial tasks
+
+-- User space : Which we actually use , like : GUI , CLI
+
+-- How communication happens between user and kernel mode ? 
+-> Shared Memory : one will write in memory block and another will read from memory block
+-> Message passing : create a pipe for communication
