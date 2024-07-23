@@ -1,0 +1,34 @@
+-- Process stores in process block , where every entry is called 'PCB'
+
+// Process States :
+-> New : when process created or converted from program to process
+-> Run : CPU is allocated
+-> Waiting : waiting for i/o
+-> Ready : Currently in memory and waiting for processor to assign
+-> Terminated : finished execution
+
+          New -----> Ready -----> Running -----> Terminated
+                      |              |
+                      |              |
+                      |              |
+                      | <-Waiting<-  |
+
+// Process Queue : 
+-> Job Queue : New -> Ready and done by LTS ( Long term scheduler )
+-> Ready Queue : Ready -> Running -> done by STS ( Short term scheduler )
+-> Waiting Queue : Processes in wait state
+
+// Swapping : 
+-> We have 4 processes [ 1,2,3,4]
+-> [3,4] uses most of the memory and ready queue is getting full 
+-> Then , this both are enter into swap space and 1,2 will proceed to execute once they done 3,4 will being back to ready queue
+-> Overall , this is the high level of swapping 
+
+// Orphan Process :
+-> A process whose parent process is terminated and its still running is called orphan process
+-> Later , it appends with init process ( first process ) as a child , whose pid = 1
+
+// Zombie Process :
+-> Child process is terminated but its entry is there in process table and parent process is waiting for its termination status is 
+   called zombie process
+
