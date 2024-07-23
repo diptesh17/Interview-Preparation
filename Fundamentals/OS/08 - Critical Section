@@ -1,0 +1,15 @@
+-- Critical Section : Segment of code whose processes/threads access shared resources such as common variables and files.
+
+// Major Thread scheduling issue
+-- Race condition : When two or more threads can access shared data and they try to change it at same time as in thread sync they can easily swap
+
+-- Solution : 
+
+-> Mutual Exclusion using locks : Allows one thread/process at a time , apply lock when access & remove lock when its terminated
+   But the issue with this is infinite waiting it first got eliminated
+
+-> Conditional Variable : It actually lets the thread to stop until certain condition occurs, lock acquire then waiting state , once they enter waiting state
+   lock will release and waits for signal , helps to eliminate the infinite wait ( contension )
+
+-> Semaphore
+      
