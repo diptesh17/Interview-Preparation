@@ -1,0 +1,9 @@
+-- Single : One process come , execute and leaves
+
+-- Batch : 'n' number of processes comes , a computer operator batches them as per need and batch wise they execute
+
+-- MultiProgramming : If process goes for i/o or other external operation , CPU dont remain idle it picks next process & result of prev kept in PCB
+
+-- Multitasking : Context switching + time sharing , CPU idle time reduced further
+
+-- MultiProcessing : More than one CPU + context switching + time sharing
