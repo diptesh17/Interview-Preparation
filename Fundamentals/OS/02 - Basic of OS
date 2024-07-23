@@ -1,0 +1,10 @@
+-- OS : Piece of software , which helps use to interact with computer hardware
+
+-- Without OS ? 
+-> Code base becomes bulky
+-> DRY principle violation
+
+-- With OS ? 
+-> Arbitration ( Resource management )
+-> Behind the scene uses Abstraction
+-> Max CPU utilization
