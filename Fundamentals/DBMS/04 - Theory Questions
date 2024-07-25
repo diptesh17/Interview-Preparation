@@ -1,0 +1,67 @@
+-- What is SQL and why it is essential ?
+-> Used for managing and manipulating RD's , allows user to perform CRUD from a RDMS , It is essential
+   because it provides a standardized way to interact with databases makes things easy to store, retrive
+   and manipulate
+
+-- SQL vs NoSQL 
+-> SQL = RD + structured schema + Suits for appln with complex relatonship between data
+-> NoSQL = Non RD + flexible schema like json + ideal for appln with scalable & semi-structured data
+
+-- ACID Properties
+-> Atomicity = transaction treat as single indivisible unit , all changes are applied or none
+-> Consistency = Gurantees that transaction takes the db from one consistent state to another , maintaining data integrity
+-> Isolation = Multiple transaction can run concurrently without interfacing with each other
+-> Durability = ensure that once transaction committed , its changes are permanent and survive system failures
+
+-- Primary Key
+-> Unique identifier for each record in table , it can't be null and serve as a reference for foreign key
+
+-- Foreign Key
+-> Its a field in one table , that refers to the primary key of another table , helps to establish a relation
+   between two tables
+
+-- Normalization
+-> Remove data redudancy and makes its consistent
+-> It involve into break down of table into smaller relatable chunks
+
+-- Denormalization
+-> Complete opposite of normalization
+-> Improve the query performance
+
+-- Inner join , left join , right join
+-> Inner join : returns only rows with matching values in both tables
+-> Left join : all rows of left table + matching with right table
+-> Right join : all rows of right table + matching with left table 
+
+-- Self join
+-> A table is joined with itself 
+-> Ek ke andr ek is self join & A intersection B is inner join
+
+-- Joins vs subqueries
+-> Joins : combines data from >=2 tables  
+-> Subqueries : query nested inside another query , it retrive data and use it as condition for outer query
+
+-- Union and Union all
+-> Union : combines result >=2 select statements into single result by removing duplicate rows
+-> Union All : Same as above + retain the duplicate rows
+
+-- SQL injection attack + prevention
+-> Milicious SQL code is inserted into an input field, result in unauth data access or manipulation
+-> Implement input validations , apply principle of least privilage to db accounts 
+-> Avoid dynamic SQL queries with concatenated user input
+
+-- Group by vs having clauses
+-> Group by : clubs same values in specified column ( agg fun )
+-> having : use to filter as a condition with group by like where is use with select
+
+-- Index & its importance
+-> Index in db structure improves the speed of data retrival operations on table , act as ordered list
+   fastly finds row and apply where clause to retrive
+-> Crutial for improving query performance especially on large db's
+
+-- Candidate key , primary key & super key
+-> Candidate : A key in column or set of columns that can uniquely identify each row in a table
+
+-- DB transaction 
+-> Sequence of one or more SQL operation that treated as single unit of work
+-> Either all operations within transaction should complete , or not even single ( rolled back)
