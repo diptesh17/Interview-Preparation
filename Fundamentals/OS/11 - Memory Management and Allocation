@@ -1,0 +1,18 @@
+Two ways to allocate and manage memory based resources :
+
+-> Fixed Partitioning : Memory is divided into blocks and each block will have same amount of space , relatively its easy to implement but leads to issues like
+   internal fragmentations as processes can have varying memory requirements.
+
+-> Dynamic Partitioning : Also known as variable Partitioning , it allocate & deallocates the memory as per size requirements.
+
+
+// Partition and Memory allocation :
+
+-> First fit : The first-fit algorithm allocates the first available memory block that is large enough to accommodate the process and it simply finds this using 
+               simple scan through this array.
+
+-> Best fit : The best-fit algorithm searches for the smallest available memory block that is large enough to accommodate the process. It aims to minimize leftover
+              fragments by choosing the most optimal block
+
+-> Worst fit : The worst-fit algorithm allocates the largest available memory block to the process. This approach intentionally keeps larger fragments to accommodate
+              potential future larger processes.
