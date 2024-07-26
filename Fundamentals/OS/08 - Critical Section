@@ -11,5 +11,29 @@
 -> Conditional Variable : It actually lets the thread to stop until certain condition occurs, lock acquire then waiting state , once they enter waiting state
    lock will release and waits for signal , helps to eliminate the infinite wait ( contension )
 
--> Semaphore
-      
+-> Semaphore : 
+( Binary Semahore )
+-- Actually helps to solve critical section problem
+-- Consist of two things : wait(s) & signal(s)
+-- wait actually decrease s value by 1 , while signal inc by 1 and help us to access critical section only one at a time
+-- we are able to achieve exclusion but order hum decide nahi krenge
+
+         wait(s)
+         {
+               while(s<=0);
+               s-=1;
+         }
+         
+         
+         signal(s)
+         {
+               s+=1;
+         }
+
+         do
+         {
+              wait();
+               // critial section
+              signal();
+               // rest section
+         }
