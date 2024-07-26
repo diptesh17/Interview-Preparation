@@ -1,0 +1,12 @@
+-- Deadlock : A process request for a resource which is used by another process so it wents to a waiting state and sometime its state never changes  as resource is
+   busy forever is called as deadlock
+
+-> It is a bug present in process/thread synchronization
+
+-- Necessary conditions for deadlock  : 
+-> Mutual Exclusion : Resource shared in mutual manner , 2 process cant use same resource at an instance
+-> Hold & wait : process wait for another resource by holding some resource
+-> No preemption : Once process schedule , it will complete then only next process can schedule
+-> Circular wait : All process wait for response in a cycle manner
+
+
