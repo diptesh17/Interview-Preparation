@@ -1,0 +1,36 @@
+1) Producer Consumer :
+
+-> We have 2 threads a producer & consumer thread
+-> Producer will enter data into data section , where as consumer will consume that data
+-> We need to acheive synchronization here , like Prod entering the data then consumer wont able to retrive it
+-> When its full then dont enter data & when its empty consumer wont able to read
+
+-> mutex : binary semaphore used for lock , initial value = 1
+-> empty : counting semaphore, initial value = n , keep track of empty slots
+-> full : track filled slots , initially = 0
+
+-> Producer : wait (empty) -> wait (mutex) -> C.S -> signal(mutex) -> signal(empty)
+-> Consumer :  wait (fail) -> wait (mutex) -> C.S -> signal(mutex) -> signal(empty)
+
+
+2) Reader Writer : 
+-> R - R is Ok , rest all operations are not aloud
+
+3) Dinning Philosophers :
+
+-> 5 Philosophers with 2 states i.e thinking or eating
+-> They will pick there left & right fork 
+
+        do {
+        
+              wait(arr[i])
+              wait(arr[i+1] % 5)
+              
+              // eat
+              
+              signal(arr[i])
+              signal(arr[i+1] % 5)
+              
+              // think
+        
+        } while(1)
