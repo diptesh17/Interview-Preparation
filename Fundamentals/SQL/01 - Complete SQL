@@ -1,0 +1,62 @@
+// database : collection of data in format that can easily accessed
+
+// DBMS : A software appln used to manage our DB
+
+// user -> DBMS -> DB 
+
+// Types of DB :
+-> Relational : data stored in tables (MYSQL)
+-> Non-relational : not stored in tables  (MONGODB)
+
+// SQL : Used to interact with relational DB's 
+
+// Create DB : create database db_name;
+
+// delete DB : drop database db_name;  
+
+// Enter into db : use db_name;
+
+// Create table : 
+-> use db_name;
+-> create table table_name( id INT PRIMARY KE , name VARCHAR(50) , age INT NOT NULL);
+
+// Insert values :
+INSERT INTO table_name( 1,"Dip",22);
+
+// char vs varchar
+-> both stores upto 256 char but char kept all size reserved where as varchar only kept until the content size
+
+//  Types of SQL commands
+-> DDL : data definition language : create alter rename drop truncate
+-> DQL : data query language : select
+-> DML : data manipulation language : insert , update , delete
+-> DCL : data control language : grant revoke
+-> TCL : transaction control language : start transaction commit rollback
+
+// Table related queries : 
+-> create 
+-> insert : insert into table_name (col1 , col2) values (20,10);
+-> select & view all column : select * from table_name;
+
+// Keys :
+-> Primary key : uniquely identifies each row + never null
+-> Foreign key : Present in column 1 + its an primary key of other clm + values can repeat or null 
+
+// Table 1 : student                                  Table2 : city
+id name cityid city                                   id city_name
+cityid = FK                                           id = pk 
+
+// Constraints :
+-> Not null
+-> unique
+-> primary key
+-> check : can limit the values allowed in a column 
+-> distinct : gives unique 
+
+// Clauses : 
+-> where : to define some condition
+-> Operator which works with where clause : + - * / > < >= <= AND OR NOT IN BETWEEN ALL LIKE ANY & | 
+-> limit : sets an upper limit on number of rows to be returned  ( select * from students limit 3);
+-> order by : asc or desc order ( select * from students order by city asc );
+
+ 
