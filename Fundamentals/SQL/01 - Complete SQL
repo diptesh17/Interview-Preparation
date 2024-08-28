@@ -59,4 +59,16 @@ cityid = FK                                           id = pk
 -> limit : sets an upper limit on number of rows to be returned  ( select * from students limit 3);
 -> order by : asc or desc order ( select * from students order by city asc );
 
- 
+// Aggregate function :
+-> max() : select max(marks) from student;
+-> avg() : select avg(marks) from student;
+-> count()
+
+// Group By Clause : Groups rows that have same values into summary rows
+// Count no of students in each city : select city, count(name) from student group by city;
+
+// Having clause : When we want to apply any condition after grouping
+// select count(name) , city from student group by city having max(marks) > 90;
+
+-> 1:46 done
+
