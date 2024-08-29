@@ -1,0 +1,12 @@
+-- How processes are schedule from ready to run or rest  : using CPU scheduling --
+
+// FCFS : First come first serve , faces problem of starvation ( big process enters , then rest mini processes wont schedule)
+
+// SJF : ( shortest job first ) , execute the one which requires less CPU time to execute ( BURST TIME )
+
+// RR : Each process will given some time to execute ( time quanta ) , coz of this every process gets equal time , highest priority process will face problem here
+
+// Priority scheduling : schedule based of priority high to low 
+
+// Multilevel queue scheduling : It makes multiple queues based on priority , one is high priority queue and other is low prQ , RR will occur in both 
+
