@@ -13,6 +13,7 @@
 -> Deadlock prevention : At least eliminate one of above 4 
 -> Deadlock Avoidance : bankers algorithm
 -> Deadlock recovery : Used to recover from deadlock once it  has been detected  
+-> Deadlock ignorance : It will occur once in year , if occur then will close the system
 
 
  
