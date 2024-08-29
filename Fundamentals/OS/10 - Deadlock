@@ -3,10 +3,16 @@
 
 -> It is a bug present in process/thread synchronization
 
--- Necessary conditions for deadlock  : 
+-- Necessary conditions for deadlock ( Deadlock occur if all becomes true a instance )  : 
 -> Mutual Exclusion : Resource shared in mutual manner , 2 process cant use same resource at an instance
 -> Hold & wait : process wait for another resource by holding some resource
 -> No preemption : Once process schedule , it will complete then only next process can schedule
 -> Circular wait : All process wait for response in a cycle manner
 
+-- Deadlock handling techniques :
+-> Deadlock prevention : At least eliminate one of above 4 
+-> Deadlock Avoidance : bankers algorithm
+-> Deadlock recovery : Used to recover from deadlock once it  has been detected  
 
+
+ 
