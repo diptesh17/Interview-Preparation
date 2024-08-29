@@ -1,5 +1,20 @@
 -- Critical Section : Segment of code whose processes/threads access shared resources such as common variables and files.
 
+-- Our task is to safely use this critical section to avoid the blunders , we take help of locks to avoid such issues 
+
+-- Process synchronisation : Techniques use to coordinate the execution of processes or threads so that they can work together harminiously  , 
+           Helps to prevents the issues like race condition , deadlock and data inconsistency
+
+-- Key requirements for having any synchronization mechanism :
+-> Mutual Exclusion : Ek hi process should enter in critical section 
+-> Progress : Mechanism should allow processes to enters in critical section 
+-> Bounding waiting : Process which is waiting to enters in critical section , should have a bounding time 
+ 
+-- Process synchronization mechanisms : 
+-> Locks / Mutexs : If process enters in Critical section it applies lock and it release once it leaves
+-> Semaphore : Kind of lock only - binary & counting , binary is same as above but in counting we can define how many process can came inside
+-> Read-Write lock : Multiple folks can read but at once only one can write 
+
 // Major Thread scheduling issue
 -- Race condition : When two or more threads can access shared data and they try to change it at same time as in thread sync they can easily swap
 
@@ -13,7 +28,7 @@
 
 -> Semaphore : 
 ( Binary Semahore )
--- Actually helps to solve critical section problem
+-- Actually helps to solve critical s ection problem
 -- Consist of two things : wait(s) & signal(s)
 -- wait actually decrease s value by 1 , while signal inc by 1 and help us to access critical section only one at a time
 -- we are able to achieve exclusion but order hum decide nahi krenge
