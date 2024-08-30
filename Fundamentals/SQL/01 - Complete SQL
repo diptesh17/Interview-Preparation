@@ -70,5 +70,115 @@ cityid = FK                                           id = pk
 // Having clause : When we want to apply any condition after grouping
 // select count(name) , city from student group by city having max(marks) > 90;
 
--> 1:46 done
+// General order for clauses :
+SELECT column(s)
+FROM table_name
+WHERE condition
+GROUP BY column(s)
+HAVING condition
+ORDER BY column(s) ASC;
+
+// Where applies condition on rows + written before group by
+// Having applies condition on groups + written after group by 
+
+// Update : for updating existing row
+-> UPDATE student set grade = "O"  where grade = "A" ;
+
+// Delete : for deleting existing row
+-> DELETE from student where marks < 33;
+
+// Foreign Key
+
+-- Create Departments table
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(100)
+);
+
+-- Create Employees table with a foreign key
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(100),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
+
+// Cascading for foreign key
+-> Good for future purpose , if some modification done in parent table's pk , it reflects in child's fk
+-> We dont need to go in the table where we kept fk , to do the chnages , it should happen manually 
+-> ON DELETE CASCADE / ON UPDATE CASCADE
+
+// alter : to change the schema 
+-> add column : ALTER TABLE table_name ADD COLUMN col_name datatype constraint;
+-> rename column
+-> drop column
+-> change
+-> modify 
+
+// truncate : It delete's table's data
+-> TRUNCATE TABLE table_name;
+-> drop : delete table
+-> truncate : data delete
+
+// Joins : used to combine rows from 2 or more tables , based on related/common column between them
+         : foreign key is not necessary
+
+-> inner join : retrives the common between them 
+-> outer join : left join = A + common between both
+              : right join = B + common between both
+              : full join = A + B complete
+
+-> Example : 
+
+
+Employees Table:
+EmployeeID	EmployeeName	DepartmentID
+1	            John	            1
+2	            Jane	            2
+3	            Jim	              3
+4	            Jake	            NULL
+
+
+Departments Table:
+DepartmentID	DepartmentName
+1                  	HR
+2                  	IT
+3	                Sales
+4               Marketing
+
+inner join :  SELECT *
+              FROM Employees
+              INNER JOIN Departments 
+              ON Employees.DepartmentID = Departments.DepartmentID
+
+left join :   SELECT *
+              FROM Employees
+              LEFT JOIN Departments 
+              ON Employees.DepartmentID = Departments.DepartmentID
+
+right join :  SELECT *
+              FROM Employees
+              RIGHT JOIN Departments 
+              ON Employees.DepartmentID = Departments.DepartmentID;
+
+full join :   SELECT *
+              FROM Employees
+              LEFT JOIN Departments 
+              ON Employees.DepartmentID = Departments.DepartmentID
+         UNION
+              SELECT *
+              FROM Employees
+              RIGHT JOIN Departments 
+              ON Employees.DepartmentID = Departments.DepartmentID
+
+
+// Alias : kind of dummy name , we use it when table names are quite big 
+
+inner join :  SELECT *
+              FROM Employees as e
+              INNER JOIN Departments as d
+              ON e.DepartmentID = d.DepartmentID
+
+// Union : used to combine the result set of two or more select statements , it gives unique records ( A & B ) not gives duplicates 
+
 
