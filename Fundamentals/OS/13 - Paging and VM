@@ -1,0 +1,12 @@
+// Paging : Storage mechanism used to retrive processes from secondary storage into main memory in form of pages 
+          : Secondary memory is divided into fixed size partition which is known as page 
+          : Main memory is also divided into same fix size block as above and called frames
+          : Processes of secondary memory can be put as non contigious in main memory
+          : CPU generate logical address , which is for secondary memory , but main memory can access by physical address
+          : It actually maintains the page table for keeping the track of logical and physical address and their links
+
+// Virtual Memory : lets computer to use more memory than it actually has
+          : Creates imaginary memory by combining RAM and secndary storage
+          : When program needs more memory than available in RAM , it temparory moves some data into secondary storage
+          : It allows to run larger program and handle multiple tasks at once
+          : Degree of multiprogramming increased , CPU utilization also increased
