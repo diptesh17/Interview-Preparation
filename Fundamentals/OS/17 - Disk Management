@@ -1,0 +1,14 @@
+// Disk management : It means secondary memory like SSD & HDD 
+
+// Disk's structure is CD like in which in every track , there are sectors
+
+// Seek time : Head moves to & fro in x axis to determine which track to look
+
+// Rotational latency : Once track found , now disk will rotate to find which sector i want 
+
+// Disk scheduling algorithms :
+
+-> FCFS : 
+-> Shortest seed time first :
+-> SCAN :
+-> CSCAN : 
