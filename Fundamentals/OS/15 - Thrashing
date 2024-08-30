@@ -1,0 +1,7 @@
+// Thrashing : Refers to situation in computer where system spends a significant time in swapping pages between
+               RAM and secondary memory
+             : Leads to performance degradation
+
+// How to avoid or overcome from it :
+-> Increase RAM
+-> Lower down the degree of multiprogramming 
