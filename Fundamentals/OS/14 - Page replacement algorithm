@@ -1,0 +1,10 @@
+// Page fault : It occurs when we want some page but which is not present in the secondary memory
+
+// Page hit : Jo requirement hai , that is present in secondary memory 
+
+// Page replacement algorithms: 
+
+-> First in first out : Frame size + pages will given 
+-> Optimal page replacement : Best page replacement algo but not implementable
+                            : Jo page abhi required hai keep it and jo future me hoga usko replace krdo 
+-> Least recently used : Replace the one which is least recently used
