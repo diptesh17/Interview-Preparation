@@ -1,0 +1,7 @@
+// Segmentation : It divides processes into smaller subparts known as modules 
+                : They dont need to be placed in contiguous memory
+                : Internal fragmentation doesn't occur here
+                : In paging relative part of code may divided into pages
+                : Code basically break downs into functions and this are loaded into memory
+                : So it its executed , entire function will execute not half way
+                : Now we are doing paging on basis of segmentation
