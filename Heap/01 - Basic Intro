@@ -1,10 +1,10 @@
 - Represent like a stack with size k
 - Identify : K + smallest / largest
-- k + smallest => max heap ( max element at top )
-- k + latgest => min heap
-- For sorting it takes nlogn but with heap it reduce to nlogk
-- We can implement it using tree but prefer to use STL unless its not suggested
 
-- Max heap = priority_queue < int > maxi;
+- k + smallest => use max heap
+- k + largest => use min heap
+- Sorting ques takes nlogn time , which can be done in nlogk using heap
 
-- Min heap = priority_queue < int , vector<int> , greater<int> > mini;
+- When smallest ask , it keeps largest elem on top until it exceeds the size , and start removing 
+- At last we will have kth smallest at top
+- That's why more kth smallest , we use max heap
