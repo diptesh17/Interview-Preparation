@@ -1,21 +1,25 @@
-class Solution{
-    public:
-    // arr : given array
-    // l : starting index of the array i.e 0
-    // r : ending index of the array i.e size-1
-    // k : find kth smallest element and return using this function
-    int kthSmallest(int arr[], int l, int r, int k) {
-        //code here
-        priority_queue<int>max_heap;
-        for(int i = l; i <= r; i++){
-            max_heap.push(arr[i]);
-            if(max_heap.size() > k){
-                max_heap.pop();
+// 1 : Loop through array
+// 2 : Push in heap
+// 3 : If size exceed , pop it
+// 4 : At last , return top
+
+class Solution {
+  public:
+    
+    int kthSmallest(vector<int> &arr, int k) {
+
+        priority_queue <int> maxHeap;
+        
+        for( int i=0 ; i<arr.size() ; i++)
+        {
+            maxHeap.push(arr[i]);
+            
+            if( maxHeap.size() > k)
+            {
+                maxHeap.pop();
             }
         }
         
-        
-        return max_heap.top();
-        
+        return maxHeap.top();
     }
 };
